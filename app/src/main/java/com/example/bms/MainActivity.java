@@ -242,27 +242,25 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
                                 String[] words = sbprint.split(" ");
 
-                                if (SendStr.indexOf("R1")>-1) {
+                                if (sbprint.indexOf("R1")>-1) {
                                     SendStr = "R2";
-                                    B5.setText(words[0]);
-                                    B6.setText(words[1]);
-                                    B7.setText(words[2]);
-                                    B8.setText(words[3]);
-                                    I.setText(words[4]);
-                                    Ah.setText(words[5]);
-                                }else
-                                    if(SendStr.indexOf("R2")>-1){
-                                        SendStr = "R1";
-                                        B1.setText(words[0]);
-                                        B2.setText(words[1]);
-                                        B3.setText(words[2]);
-                                        B4.setText(words[3]);
-                                    }
-
+                                    B5.setText(words[1]);
+                                    B6.setText(words[2]);
+                                    B7.setText(words[3]);
+                                    B8.setText(words[4]);
+                                    I.setText(words[5]);
+                                    Ah.setText(words[6]);
+                                }
+                                if(sbprint.indexOf("R2")>-1){
+                                    SendStr = "R1";
+                                    B1.setText(words[1]);
+                                    B2.setText(words[2]);
+                                    B3.setText(words[3]);
+                                    B4.setText(words[4]);
+                                }
                             }
                         });
                     }
-
                 } catch (IOException e) {
                     break;
                 }
